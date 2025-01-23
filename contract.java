@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class contract {
-  public static void Main (String[] args) throws InterruptedException {
+  public static void main (String[] args) throws InterruptedException {
 
     Scanner scan = new Scanner(System.in);
     String name;
@@ -17,23 +17,17 @@ public class contract {
     
     // Code below is HIDDEN
 
-    System.out.printf("Welcome to the Nacreous Intelligent Systems Hiring Center.");
-    for (int i = 0; i < 5; i++) {
-      Thread.sleep(50);
-      System.out.printf("\n");
-    }
-
-    System.out.printf("Do you accept the license agreement? (y/n) ");
+    System.out.printf("\nWelcome to the Nacreous Intelligent Systems Hiring Center.\n");
+    Thread.sleep(1000);
+    System.out.printf("\nDo you accept the license agreement? (y/n) ");
     String acc = scan.next();
-    System.out.printf("\n");
-    Thread.sleep(500);
-
-    System.out.printf("Processing");
+    Thread.sleep(250);
+    System.out.printf("\nProcessing");
       for (int i = 0; i < 3; i++) {
-        Thread.sleep(500);
+        Thread.sleep(1250);
         System.out.printf(".");
       }
-      Thread.sleep(1000);
+      Thread.sleep(1500);
       System.out.printf("\n");
 
 
@@ -44,10 +38,10 @@ public class contract {
       System.out.printf("Error: License mismatch. User has agreed to one (1) or more conflicting licenses.");
     }
     else if (eula == true && !acc.toLowerCase().equals("y")) {
-      System.out.printf("")
+      System.out.printf("Hired! (TODO: Replace with more)");
     }
     
 
-
+    scan.close();
   }
 }
